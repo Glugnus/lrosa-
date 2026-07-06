@@ -20,7 +20,7 @@ export default function MobileMenu({ isOpen, closeMenu }: MobileMenuProps) {
           <X size={32} />
         </button>
       </div>
-      <nav className="flex flex-col items-center justify-center flex-1 gap-10 pb-20">
+      <nav className="flex flex-col items-center bg-zinc-950 justify-center flex-1 gap-10 pb-10">
         <Link
           href="/"
           onClick={closeMenu}
@@ -29,11 +29,11 @@ export default function MobileMenu({ isOpen, closeMenu }: MobileMenuProps) {
           Acceuil
         </Link>
         <Link
-          href="/galeries"
+          href="/galerie"
           onClick={closeMenu}
           className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
         >
-          Galeries
+          Galerie
         </Link>
         <Link
           href="/a-propos"
