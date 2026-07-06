@@ -26,7 +26,6 @@ export default function ContactForm() {
 
   const onSubmit = async (data: z.infer<typeof contactSchema>) => {
     const result = await sendContactEmail(data);
-
     if (result.success) {
       setIsSuccess(true);
       reset(); // Vide le formulaire

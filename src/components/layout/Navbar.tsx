@@ -1,5 +1,5 @@
-import { Menu } from "lucide-react";
 import Link from "next/link";
+import MobileNavigation from "../navigation/MobileNavigation";
 
 export default function Navbar() {
   return (
@@ -37,9 +37,7 @@ export default function Navbar() {
             Contact
           </Link>
         </nav>
-        <button className="md:hidden text-zinc-300 hover:text-white uppercase text-sm font-bold tracking-widest">
-          <Menu />
-        </button>
+        <MobileNavigation />
       </div>
     </header>
   );
