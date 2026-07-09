@@ -75,12 +75,26 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">5. Cookies</h2>
+          <h2 className="text-xl font-bold text-white mb-4">
+            5. Cookies et traceurs
+          </h2>
           <p>
-            Ce site portfolio est conçu pour être respectueux de votre vie
-            privée. Il ne dépose aucun cookie de traçage publicitaire. [Si tu
-            ajoutes Google Analytics plus tard, il faudra modifier cette phrase
-            pour expliquer l&apos;utilisation des cookies analytiques].
+            Ce site utilise <strong>Google Analytics</strong> (GA4), un outil
+            d&apos;analyse d&apos;audience, pour mesurer le trafic et comprendre
+            comment les visiteurs interagissent avec le portfolio.
+          </p>
+          <p className="mt-2">
+            Conformément à la réglementation européenne, ces cookies ne sont
+            déposés sur votre appareil{" "}
+            <strong>que si vous avez donné votre consentement explicite</strong>{" "}
+            via le bandeau d&apos;information affiché lors de votre première
+            visite.
+          </p>
+          <p className="mt-2">
+            Les données collectées (comme les pages visitées ou le temps passé
+            sur le site) sont anonymisées. Vous pouvez à tout moment retirer
+            votre consentement en supprimant les données de site (ou &quot;Local
+            Storage&quot;) dans les paramètres de votre navigateur.
           </p>
         </section>
       </div>
