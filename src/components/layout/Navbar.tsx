@@ -16,7 +16,7 @@ export default function Navbar() {
             href="/"
             className="text-sm font-medium hover:text-white transition-colors"
           >
-            Acceuil
+            Accueil
           </Link>
           <Link
             href="/galerie"
