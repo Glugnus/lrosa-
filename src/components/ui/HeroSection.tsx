@@ -9,7 +9,7 @@ export default function HeroSection() {
           alt="Amélie peignant dans son atelier"
           fill
           sizes="100vw"
-          className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+          className="object-cover lg:grayscale hover:grayscale-0 transition-all duration-1000"
           priority
         />
       </div>
