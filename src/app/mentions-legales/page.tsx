@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mentions Légales | Amélie Pernet",
-  description: "Mentions légales du portfolio de l'artiste Amélie Pernet.",
+  title: "Mentions Légales | Amélie",
+  description: "Mentions légales du portfolio de l'artiste Amélie.",
 };
 
 export default function MentionsLegales() {

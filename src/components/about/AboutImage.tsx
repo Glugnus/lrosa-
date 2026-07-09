@@ -5,7 +5,7 @@ export function AboutImage() {
     <div className="relative w-full aspect-3/4 border border-zinc-800 bg-zinc-900 overflow-hidden">
       <Image
         src="/profil.jpg"
-        alt="Amélie Pernet dans son atelier"
+        alt="Amélie dans son atelier"
         fill
         sizes="(max-width: 1024px) 100vw, 50vw"
         className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"

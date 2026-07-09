@@ -31,7 +31,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-xs text-zinc-600">
-          © {new Date().getFullYear()} Amélie Pernet. Tous droits réservés.
+          © {new Date().getFullYear()} LROSA². Tous droits réservés.
         </p>
       </div>
     </footer>

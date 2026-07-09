@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Galerie",
   description:
-    "Explorez la collection complète des œuvres originales d'Amélie Pernet : tableaux pop art, toiles contemporaines et objets d'art.",
+    "Explorez la collection complète des œuvres originales d'Amélie : tableaux pop art, toiles contemporaines et objets d'art.",
 };
 export default async function Galerie() {
   const artworks = await client.fetch<ArtworkSummary[]>(ALL_ARTWORKS_QUERY);

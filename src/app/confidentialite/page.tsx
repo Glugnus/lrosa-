@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Politique de Confidentialité | Amélie Pernet",
+  title: "Politique de Confidentialité | LROSA²",
   description: "Politique de gestion des données personnelles.",
 };
 
@@ -69,7 +69,7 @@ export default function Confidentialite() {
             de vos données personnelles.
           </p>
           <p className="mt-2">
-            Pour exercer ces droits, vous pouvez contacter Amélie Pernet à
+            Pour exercer ces droits, vous pouvez contacter LROSA² à
             l&apos;adresse suivante : [Email de contact].
           </p>
         </section>
