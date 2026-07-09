@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
         <Link
           href="/"
-          className="font-heading text-2xl font-bold text-white tracking-wider uppercase"
+          className="font-heading text-2xl font-bold text-rose-500 tracking-wider uppercase"
         >
           LROSA²
         </Link>
