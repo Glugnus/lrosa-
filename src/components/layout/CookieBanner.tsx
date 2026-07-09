@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function CookieBanner() {
   const [consent, setConsent] = useState<boolean | null>(null);
 
-  useEffect(() => {
+ useEffect(() => {
     const initializeConsent = () => {
       const storedConsent = localStorage.getItem("cookie_consent");
       if (storedConsent === "granted") {
