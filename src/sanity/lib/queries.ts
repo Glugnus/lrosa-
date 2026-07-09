@@ -12,7 +12,7 @@ export const ALL_ARTWORKS_QUERY = `
     _id,
     title,
     year,
-    material,
+    dimensions,
     "slug": slug.current,
     "imageUrl": mainImage.asset->url,
     "width": mainImage.asset->metadata.dimensions.width,

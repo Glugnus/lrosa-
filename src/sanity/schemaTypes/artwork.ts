@@ -25,7 +25,7 @@ export const artwork = defineType({
       name: "mainImage",
       title: "Image principale (Main Image)",
       description:
-        "La photo principale qui sera affichée sur la galerie et en premier sur la page produit.",
+        "La photo principale qui sera affichée sur la galerie et en premier sur la page de l'œuvre.",
       type: "image",
       options: {
         hotspot: true,

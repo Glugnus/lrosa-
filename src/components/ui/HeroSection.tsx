@@ -5,12 +5,12 @@ export default function HeroSection() {
     <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden border-b border-zinc-800">
       <div className="absolute inset-0 z-0 opacity-40">
         <Image
-          src="/wall.jpg" //
-          alt="Amélie Pernet peignant dans son atelier"
+          src="/wall.jpg"
+          alt="Amélie peignant dans son atelier"
           fill
           sizes="100vw"
-          className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-          priority // Dit à Next.js de charger cette image en priorité absolue (très bon pour le SEO)
+          className="object-cover lg:grayscale hover:grayscale-0 transition-all duration-1000"
+          priority
         />
       </div>
       <div className="relative z-10 text-center px-4 flex flex-col items-center">
@@ -19,6 +19,10 @@ export default function HeroSection() {
         </h1>
         <p className="text-zinc-300 text-lg md:text-2xl font-light tracking-widest uppercase border-t border-zinc-500 pt-4">
           Pop Art & Street Art
+        </p>
+        <p className="mt-6 text-zinc-400 text-sm md:text-lg italic font-light max-w-2xl px-4">
+          &quot;Je crois que les regards racontent ce que les mots
+          taisent.&quot;
         </p>
       </div>
     </section>

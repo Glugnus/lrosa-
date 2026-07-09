@@ -7,9 +7,9 @@ import { FAVORITES_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accueil | Amélie Pernet",
+  title: "Accueil | LROSA²",
   description:
-    "Découvrez l'univers d'Amélie Pernet, artiste peintre. Art moderne, pop art, street art et objets détournés.",
+    "Découvrez l'univers de LROSA², artiste peintre. Art moderne, pop art, street art et objets détournés.",
 };
 export default async function Home() {
   const favoritesArtworks =

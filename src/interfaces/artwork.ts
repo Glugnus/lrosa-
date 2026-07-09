@@ -15,7 +15,7 @@ export interface ArtworkDetail {
 export interface ArtworkSummary {
   _id: string;
   title: string;
-  material?: string;
+  dimensions?: string;
   width: number;
   height: number;
   slug: string;

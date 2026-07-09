@@ -29,7 +29,7 @@ export default function GalleryGrid({
                 {artwork.title}
               </h2>
               <p className="text-rose-500 text-sm font-medium tracking-widest uppercase mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                {artwork.material}
+                {artwork.dimensions}
               </p>
             </div>
           </Link>

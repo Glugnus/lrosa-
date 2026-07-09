@@ -1,5 +1,5 @@
-import { Menu } from "lucide-react";
 import Link from "next/link";
+import MobileNavigation from "../navigation/MobileNavigation";
 
 export default function Navbar() {
   return (
@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
         <Link
           href="/"
-          className="font-heading text-2xl font-bold text-white tracking-wider uppercase"
+          className="font-heading text-2xl font-bold text-rose-500 tracking-wider uppercase"
         >
           LROSA²
         </Link>
@@ -16,7 +16,7 @@ export default function Navbar() {
             href="/"
             className="text-sm font-medium hover:text-white transition-colors"
           >
-            Acceuil
+            Accueil
           </Link>
           <Link
             href="/galerie"
@@ -37,9 +37,7 @@ export default function Navbar() {
             Contact
           </Link>
         </nav>
-        <button className="md:hidden text-zinc-300 hover:text-white uppercase text-sm font-bold tracking-widest">
-          <Menu />
-        </button>
+        <MobileNavigation />
       </div>
     </header>
   );

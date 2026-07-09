@@ -8,10 +8,10 @@ export default function AboutTeaser() {
           L&apos;énergie des mots dissimulés
         </h2>
         <p className="text-zinc-400 text-lg md:text-xl leading-relaxed mb-6">
-          Après avoir longtemps peint à l’abri des regards, Amélie Pernet
-          partage aujourd&apos;hui un univers vibrant, inspiré du street art et
-          du pop art. Ses œuvres uniques, chargées d’énergie, mêlent acrylique,
-          aérosol et objets détournés.
+          Après avoir longtemps peint à l’abri des regards, je partage
+          aujourd&apos;hui un univers vibrant, inspiré du street art et du pop
+          art. Mes œuvres uniques, chargées d’énergie, mêlent acrylique, aérosol
+          et objets détournés.
         </p>
         <Link
           href="/a-propos"

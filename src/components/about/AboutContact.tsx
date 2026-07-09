@@ -4,7 +4,7 @@ export function AboutContact() {
   return (
     <div className="mt-16 pt-8 border-t border-zinc-800">
       <p className="text-sm uppercase tracking-widest text-zinc-500 mb-6 font-bold">
-        Un projet sur-mesure ?
+        Une idée de collaboration ?
       </p>
       <Link
         href="/contact"

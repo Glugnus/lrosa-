@@ -18,12 +18,9 @@ export async function sendContactEmail(
   try {
     const validatedData = contactSchema.parse(formData);
 
-    // IMPORTANT : En phase de test (sans domaine vérifié sur Resend),
-    // tu DOIS envoyer l'email à l'adresse mail avec laquelle tu as créé ton compte Resend.
-    // Remplace "TON_EMAIL_RESEND@exemple.com" par ton adresse mail.
     const { data, error } = await resend.emails.send({
-      from: "Contact Portfolio <onboarding@resend.dev>",
-      to: ["pernet.aurelien@gmail.com"], // <-- Modifie ça !
+      from: "Contact Portfolio <contact@lrosa.fr>",
+      to: ["larosa.amelie@gmail.com"],
       replyTo: validatedData.email,
       subject: `Nouveau message de ${validatedData.nom} : ${validatedData.sujet}`,
       text: `Nom: ${validatedData.nom}\nEmail: ${validatedData.email}\nSujet: ${validatedData.sujet}\nMessage:\n${validatedData.message}`,

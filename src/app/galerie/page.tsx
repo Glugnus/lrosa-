@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Galerie",
   description:
-    "Explorez la collection complète des œuvres originales d'Amélie Pernet : tableaux pop art, toiles contemporaines et objets d'art.",
+    "Explorez la collection complète des œuvres originales d'Amélie : tableaux pop art, toiles contemporaines et objets d'art.",
 };
 export default async function Galerie() {
   const artworks = await client.fetch<ArtworkSummary[]>(ALL_ARTWORKS_QUERY);
@@ -20,9 +20,8 @@ export default async function Galerie() {
             Collection
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Découvrez l&apos;ensemble des œuvres originales d&apos;Amélie
-            Pernet. Une exploration vibrante entre pop art, influences urbaines
-            et objets détournés.
+            Découvrez l&apos;ensemble de mes œuvres originales. Une exploration
+            vibrante entre pop art, influences urbaines et objets détournés.
           </p>
         </header>
         <GalleryGrid artworks={artworks} />

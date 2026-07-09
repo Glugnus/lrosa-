@@ -72,14 +72,14 @@ export default function ArtworkCarousel({
       </AnimatePresence>
       <button
         onClick={prevImage}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-zinc-950/50 hover:bg-zinc-900 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 z-10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-zinc-950/50 hover:bg-zinc-900 text-white p-2 rounded-full opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 lg:delay-100 z-10"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextImage}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-zinc-950/50 hover:bg-zinc-900 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 z-10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-zinc-950/50 hover:bg-zinc-900 text-white p-2 rounded-full opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 lg:delay-100 z-10"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-6 h-6" />

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { client } from "@/sanity/lib/client";
 import { ArtworkDetail } from "@/interfaces/artwork";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { ARTWORK_DETAIL_QUERY } from "@/sanity/lib/queries";
 import ArtworkImages from "@/components/gallery/ArtworkImages";
 import ArtworkInfo from "@/components/gallery/ArtworkInfo";
@@ -10,7 +10,7 @@ import { Metadata, ResolvingMetadata } from "next";
 
 export async function generateMetadata(
   { params }: { params: { slug: string } },
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParams = await params;
   const artwork = await client.fetch<ArtworkDetail>(ARTWORK_DETAIL_QUERY, {
@@ -24,21 +24,24 @@ export async function generateMetadata(
   }
 
   const previousImages = (await parent).openGraph?.images || [];
-  
+
   const ogImage = artwork.imageUrl || "";
 
   return {
     title: artwork.title,
-    description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+    description:
+      artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
     openGraph: {
       title: artwork.title,
-      description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+      description:
+        artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
       images: ogImage ? [ogImage, ...previousImages] : previousImages,
     },
     twitter: {
       card: "summary_large_image",
       title: artwork.title,
-      description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+      description:
+        artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
       images: ogImage ? [ogImage] : [],
     },
   };
@@ -54,7 +57,7 @@ export default async function DetailOeuvre({
   });
 
   if (!artwork) {
-    redirect("/galerie");
+    notFound();
   }
 
   return (

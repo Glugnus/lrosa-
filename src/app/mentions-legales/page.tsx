@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mentions Légales | Amélie Pernet",
-  description: "Mentions légales du portfolio de l'artiste Amélie Pernet.",
+  title: "Mentions Légales | Amélie",
+  description: "Mentions légales du portfolio de l'artiste Amélie.",
 };
 
 export default function MentionsLegales() {
@@ -18,39 +18,21 @@ export default function MentionsLegales() {
             1. Éditeur du site
           </h2>
           <p>
-            Le présent site est édité par <strong>Amélie Pernet</strong>,
-            artiste peintre (ou statut auto-entrepreneur/Maison des Artistes si
-            applicable).
-            <br />
-            Siège social : [Adresse d&apos;Amélie, Code Postal, Ville]
-            <br />
-            Email : [Email de contact officiel, ex: contact@ameliepernet.fr]
-            <br />
-            Téléphone : [Numéro de téléphone - optionnel mais recommandé]
+            Ce site est un portfolio artistique personnel, non professionnel,
+            édité à des fins de présentation des créations de l&apos;artiste
+            sous le pseudonyme de <strong>LROSA²</strong>.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-4">
-            2. Directeur de la publication
-          </h2>
-          <p>Le directeur de la publication est Amélie Pernet.</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-4">
-            3. Création et développement
-          </h2>
-          <p>
-            Conception, design et développement web : [Ton Prénom et Nom]
-            <br />
-            Contact : [Ton email de développeur ou lien vers ton
-            profil/portfolio]
+          <p className="mt-2">
+            Conformément à l&apos;article 6-III-2 de la Loi n° 2004-575 du 21
+            juin 2004 pour la confiance dans l&apos;économie numérique (LCEN),
+            l&apos;éditeur a choisi de préserver son anonymat. Les informations
+            d&apos;identification personnelle ont été transmises en toute
+            confidentialité à l&apos;hébergeur du site.
           </p>
+          <p className="mt-2">Contact : contact@lrosa2.com</p>
         </section>
-
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">4. Hébergement</h2>
+          <h2 className="text-xl font-bold text-white mb-4">2. Hébergement</h2>
           <p>
             Ce site est hébergé par <strong>Vercel Inc.</strong>
             <br />
@@ -64,7 +46,7 @@ export default function MentionsLegales() {
 
         <section>
           <h2 className="text-xl font-bold text-white mb-4">
-            5. Propriété intellectuelle
+            3. Propriété intellectuelle
           </h2>
           <p>
             L&apos;ensemble de ce site relève de la législation française et
@@ -77,7 +59,7 @@ export default function MentionsLegales() {
             Toute reproduction, représentation, modification, publication,
             adaptation de tout ou partie des éléments du site, quel que soit le
             moyen ou le procédé utilisé, est interdite, sauf autorisation écrite
-            préalable de l&apos;artiste Amélie Pernet.
+            préalable de l&apos;artiste <strong>LROSA²</strong>.
           </p>
         </section>
       </div>

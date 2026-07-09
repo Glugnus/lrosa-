@@ -3,6 +3,7 @@ import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/layout/CookieBanner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,27 +18,31 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  ),
   title: {
-    default: "Amélie Pernet | Artiste Peintre",
-    template: "%s | Amélie Pernet",
+    default: "LROSA² | Artiste Peintre",
+    template: "%s | LROSA²",
   },
   description:
-    "Portfolio officiel des œuvres d'Amélie Pernet. Art moderne, pop art et street art.",
+    "Portfolio officiel des œuvres de LROSA². Art moderne, pop art et street art.",
   keywords: ["Artiste peintre", "Art moderne", "Pop art", "Street art"],
-  authors: [{ name: "Amélie Pernet" }],
-  creator: "Amélie Pernet",
+  authors: [{ name: "LROSA²" }],
+  creator: "LROSA²",
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Amélie Pernet",
-    title: "Amélie Pernet | Artiste Peintre",
-    description: "Portfolio officiel des œuvres d'Amélie Pernet. Art moderne, pop art et street art.",
+    siteName: "LROSA²",
+    title: "LROSA² | Artiste Peintre",
+    description:
+      "Portfolio officiel des œuvres d'LROSA². Art moderne, pop art et street art.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amélie Pernet | Artiste Peintre",
-    description: "Portfolio officiel des œuvres d'Amélie Pernet. Art moderne, pop art et street art.",
+    title: "LROSA² | Artiste Peintre",
+    description:
+      "Portfolio officiel des œuvres d'LROSA². Art moderne, pop art et street art.",
   },
   robots: {
     index: true,
@@ -63,6 +68,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

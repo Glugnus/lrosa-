@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "Découvrez l'histoire, les inspirations et le parcours d'Amélie Pernet, artiste peintre contemporaine.",
+    "Découvrez l'histoire, les inspirations et le parcours de LROSA², artiste peintre contemporaine.",
 };
 export default function APropos() {
   return (
