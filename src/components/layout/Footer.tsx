@@ -7,21 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex gap-6 uppercase text-sm font-bold tracking-widest">
           <a
-            href="#"
+            href="https://www.instagram.com/lrosa2_artiste?igsh=d3hrNjdsemR1dWF5"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
             className="hover:text-white transition-colors"
-          ></a>{" "}
-          <FaInstagram className="w-6 h-6 text-zinc-300 hover:text-rose-500 transition-colors" />
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="hover:text-white transition-colors"
           >
-            <FaFacebook className="w-6 h-6 text-zinc-300 hover:text-blue-500 transition-colors" />
+            <FaInstagram className="w-6 h-6 text-zinc-300 hover:text-rose-500 transition-colors" />
           </a>
         </div>
         <div className="flex gap-6 text-sm text-zinc-500">
