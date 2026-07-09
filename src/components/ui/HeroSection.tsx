@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 opacity-40">
         <Image
           src="/wall.jpg"
-          alt="Amélie Pernet peignant dans son atelier"
+          alt="Amélie peignant dans son atelier"
           fill
           sizes="100vw"
           className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"

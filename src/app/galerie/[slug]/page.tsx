@@ -10,7 +10,7 @@ import { Metadata, ResolvingMetadata } from "next";
 
 export async function generateMetadata(
   { params }: { params: { slug: string } },
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParams = await params;
   const artwork = await client.fetch<ArtworkDetail>(ARTWORK_DETAIL_QUERY, {
@@ -24,21 +24,24 @@ export async function generateMetadata(
   }
 
   const previousImages = (await parent).openGraph?.images || [];
-  
+
   const ogImage = artwork.imageUrl || "";
 
   return {
     title: artwork.title,
-    description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+    description:
+      artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
     openGraph: {
       title: artwork.title,
-      description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+      description:
+        artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
       images: ogImage ? [ogImage, ...previousImages] : previousImages,
     },
     twitter: {
       card: "summary_large_image",
       title: artwork.title,
-      description: artwork.description || `Découvrez l'œuvre ${artwork.title} d'Amélie Pernet.`,
+      description:
+        artwork.description || `Découvrez l'œuvre ${artwork.title} de LROSA².`,
       images: ogImage ? [ogImage] : [],
     },
   };

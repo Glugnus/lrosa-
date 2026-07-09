@@ -20,12 +20,14 @@ export default function Confidentialite() {
           <p>
             En utilisant notre formulaire de contact, vous êtes amené à nous
             transmettre des informations, dont certaines sont de nature à vous
-            identifier (&quot;Données Personnelles&quot;). C&apos;est le cas
-            lorsque vous remplissez le formulaire pour une demande de création
-            sur-mesure ou pour acquérir une œuvre.
+            identify (&quot;Données Personnelles&quot;). C&apos;est le cas
+            lorsque vous remplissez le formulaire pour une demande
+            d&apos;information ou de renseignement concernant le portfolio de
+            l&apos;artiste.
           </p>
           <p className="mt-2">
-            Les données collectées sont : votre nom et votre adresse e-mail.
+            Les données collectées sont exclusivement : votre nom (ou
+            pseudonyme) et votre adresse e-mail.
           </p>
         </section>
 
@@ -38,8 +40,11 @@ export default function Confidentialite() {
             utilisées exclusivement pour :
           </p>
           <ul className="list-disc list-inside mt-2 space-y-1">
-            <li>Vous recontacter suite à votre demande.</li>
-            <li>Échanger concernant une œuvre ou une commande sur-mesure.</li>
+            <li>Vous recontacter suite à votre message.</li>
+            <li>
+              Échanger concernant les œuvres et l&apos;univers artistique de
+              LROSA².
+            </li>
           </ul>
           <p className="mt-2">
             Ces données ne sont en aucun cas vendues, cédées ou louées à des
@@ -69,8 +74,8 @@ export default function Confidentialite() {
             de vos données personnelles.
           </p>
           <p className="mt-2">
-            Pour exercer ces droits, vous pouvez contacter LROSA² à
-            l&apos;adresse suivante : [Email de contact].
+            Pour exercer ces droits, vous pouvez contacter l&apos;administrateur
+            du site à l&apos;adresse suivante : contact@lrosa2.com.
           </p>
         </section>
 
