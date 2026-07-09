@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { client } from "@/sanity/lib/client";
 import { ArtworkDetail } from "@/interfaces/artwork";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { ARTWORK_DETAIL_QUERY } from "@/sanity/lib/queries";
 import ArtworkImages from "@/components/gallery/ArtworkImages";
 import ArtworkInfo from "@/components/gallery/ArtworkInfo";
@@ -54,7 +54,7 @@ export default async function DetailOeuvre({
   });
 
   if (!artwork) {
-    redirect("/galerie");
+    notFound();
   }
 
   return (
