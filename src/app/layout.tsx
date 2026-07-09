@@ -39,13 +39,22 @@ export const metadata: Metadata = {
     siteName: "LROSA²",
     title: "LROSA² | Artiste Peintre",
     description:
-      "Portfolio officiel des œuvres d'LROSA². Art moderne, pop art et street art.",
+      "Portfolio officiel des œuvres de LROSA². Art moderne, pop art et street art.",
+    images: [
+      {
+        url: "/wall.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aperçu du portfolio de LROSA²",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "LROSA² | Artiste Peintre",
     description:
-      "Portfolio officiel des œuvres d'LROSA². Art moderne, pop art et street art.",
+      "Portfolio officiel des œuvres de LROSA². Art moderne, pop art et street art.",
+    images: ["/wall.jpg"],
   },
   robots: {
     index: true,
