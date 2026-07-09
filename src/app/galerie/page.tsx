@@ -20,9 +20,8 @@ export default async function Galerie() {
             Collection
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Découvrez l&apos;ensemble des œuvres originales d&apos;Amélie
-            Pernet. Une exploration vibrante entre pop art, influences urbaines
-            et objets détournés.
+            Découvrez l&apos;ensemble de mes œuvres originales. Une exploration
+            vibrante entre pop art, influences urbaines et objets détournés.
           </p>
         </header>
         <GalleryGrid artworks={artworks} />
