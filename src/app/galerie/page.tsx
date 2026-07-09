@@ -1,6 +1,6 @@
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import { ArtworkSummary } from "@/interfaces/artwork";
-import { client } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
 import { ALL_ARTWORKS_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 
@@ -10,7 +10,9 @@ export const metadata: Metadata = {
     "Explorez la collection complète des œuvres originales d'Amélie : tableaux pop art, toiles contemporaines et objets d'art.",
 };
 export default async function Galerie() {
-  const artworks = await client.fetch<ArtworkSummary[]>(ALL_ARTWORKS_QUERY);
+  const { data: artworks } = (await sanityFetch({
+    query: ALL_ARTWORKS_QUERY,
+  })) as { data: ArtworkSummary[] };
 
   return (
     <main className="min-h-screen bg-zinc-950 py-24">
