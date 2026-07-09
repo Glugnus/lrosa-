@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { client } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
 import { ArtworkDetail } from "@/interfaces/artwork";
 import { notFound } from "next/navigation";
 import { ARTWORK_DETAIL_QUERY } from "@/sanity/lib/queries";
@@ -13,9 +13,10 @@ export async function generateMetadata(
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParams = await params;
-  const artwork = await client.fetch<ArtworkDetail>(ARTWORK_DETAIL_QUERY, {
-    slug: resolvedParams.slug,
-  });
+  const { data: artwork } = (await sanityFetch({
+    query: ARTWORK_DETAIL_QUERY,
+    params: { slug: resolvedParams.slug },
+  })) as { data: ArtworkDetail | null };
 
   if (!artwork) {
     return {
@@ -52,9 +53,10 @@ export default async function DetailOeuvre({
   params: { slug: string };
 }) {
   const resolvedParams = await params;
-  const artwork = await client.fetch<ArtworkDetail>(ARTWORK_DETAIL_QUERY, {
-    slug: resolvedParams.slug,
-  });
+  const { data: artwork } = (await sanityFetch({
+    query: ARTWORK_DETAIL_QUERY,
+    params: { slug: resolvedParams.slug },
+  })) as { data: ArtworkDetail | null };
 
   if (!artwork) {
     notFound();
