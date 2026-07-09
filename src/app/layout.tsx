@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/layout/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SanityLive } from "@/sanity/lib/live";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,7 +71,10 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <SanityLive />
         <CookieBanner />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
