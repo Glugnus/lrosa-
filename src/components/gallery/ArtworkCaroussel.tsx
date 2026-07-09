@@ -58,14 +58,24 @@ export default function ArtworkCarousel({
           initial="enter"
           animate="center"
           exit="exit"
-          className="absolute inset-0"
+          className="absolute inset-0 overflow-hidden"
         >
+          <div className="absolute inset-0 select-none pointer-events-none scale-110 blur-3xl opacity-35">
+            <Image
+              src={images[currentIndex]}
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              priority={currentIndex === 0}
+            />
+          </div>
           <Image
             src={images[currentIndex]}
             alt={`${title} - Vue ${currentIndex + 1}`}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain relative z-10 scale-105"
             priority={currentIndex === 0}
           />
         </motion.div>
