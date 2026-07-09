@@ -33,10 +33,10 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
             </h3>
             <p className="text-sm text-zinc-600">
               Cette pièce fait désormais partie d&apos;une collection privée.
-              Amélie réalise également des toiles sur-mesure.
+              Amélie réalise également des créations personnalisées.
             </p>
             <Link
-              href={`/contact?sujet=Demande de création sur-mesure (Style ${artwork.title})`}
+              href={`/contact?sujet=Demande de collaboration artistique (Style ${artwork.title})`}
               className="inline-block mt-4 border border-zinc-700 text-zinc-300 hover:text-white hover:border-white px-8 py-4 uppercase text-sm font-bold tracking-widest text-center transition-colors"
             >
               Demander une création similaire
@@ -45,14 +45,11 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
         ) : (
           <>
             <h3 className="font-heading text-xl text-white uppercase font-bold">
-              Acquérir cette œuvre
+              Intéressé par cette œuvre ?
             </h3>
-            {artwork.price && (
-              <p className="text-2xl text-white font-mono">{artwork.price} €</p>
-            )}
             <p className="text-sm text-zinc-500">
-              Chaque modèle est unique et peint à la main. Contactez
-              l&apos;artiste pour réserver cette pièce.
+              Chaque œuvre est unique et peinte à la main. N&apos;hésitez pas
+              à contacter l&apos;artiste pour en savoir plus.
             </p>
             <Link
               href={`/contact?sujet=Intérêt pour : ${artwork.title}`}

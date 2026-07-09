@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Amélie pour toute question, commande sur-mesure ou demande de collaboration.",
+    "Contactez Amélie pour toute question sur ses œuvres ou une demande de collaboration.",
 };
 export default function ContactPage({
   searchParams,
@@ -18,8 +18,8 @@ export default function ContactPage({
           Contact
         </h1>
         <p className="text-zinc-400 mb-12">
-          Vous avez une question sur une œuvre, une commande sur-mesure ou une
-          demande de collaboration ? Écrivez-moi, je vous répondrais rapidement.
+          Vous avez une question sur une œuvre, un projet de collaboration ou
+          simplement envie d&apos;échanger ? Écrivez-moi, je vous répondrai rapidement.
         </p>
 
         <ContactForm />
