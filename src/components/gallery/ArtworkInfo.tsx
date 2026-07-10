@@ -32,8 +32,8 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
               Œuvre acquise
             </h3>
             <p className="text-sm text-zinc-600">
-              Cette pièce fait désormais partie d&apos;une collection privée.
-              Amélie réalise également des créations personnalisées.
+              Cette pièce fait désormais partie d&apos;une collection privée. Je
+              réalise également des créations personnalisées.
             </p>
             <Link
               href={`/contact?sujet=Demande de collaboration artistique (Style ${artwork.title})`}
@@ -48,14 +48,14 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
               Intéressé par cette œuvre ?
             </h3>
             <p className="text-sm text-zinc-500">
-              Chaque œuvre est unique et peinte à la main. N&apos;hésitez pas
-              à contacter l&apos;artiste pour en savoir plus.
+              Chaque œuvre est unique et peinte à la main. N&apos;hésitez pas à
+              me contacter pour en savoir plus.
             </p>
             <Link
               href={`/contact?sujet=Intérêt pour : ${artwork.title}`}
               className="inline-block mt-4 bg-white text-zinc-950 hover:bg-zinc-200 px-8 py-4 uppercase text-sm font-bold tracking-widest text-center transition-colors"
             >
-              Contacter l&apos;artiste
+              Me contacter
             </Link>
           </>
         )}

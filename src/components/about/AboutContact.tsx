@@ -10,7 +10,7 @@ export function AboutContact() {
         href="/contact"
         className="inline-block border border-zinc-700 hover:border-white text-zinc-300 hover:text-white px-8 py-4 uppercase text-xs font-bold tracking-widest transition-all"
       >
-        Contacter Amélie
+        Me Contacter
       </Link>
     </div>
   );

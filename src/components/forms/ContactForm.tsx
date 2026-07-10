@@ -41,7 +41,7 @@ export default function ContactForm() {
           Message envoyé !
         </h3>
         <p className="text-zinc-400">
-          Merci pour votre message. Amélie vous recontactera très prochainement.
+          Merci pour votre message. Je vous recontacterai très prochainement.
         </p>
         <button
           onClick={() => setIsSuccess(false)}
