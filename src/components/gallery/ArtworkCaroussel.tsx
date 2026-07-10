@@ -5,15 +5,15 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
-interface ArtworkCarouselProps {
+interface ArtworkCarousselProps {
   images: string[];
   title: string;
 }
 
-export default function ArtworkCarousel({
+export default function ArtworkCaroussel({
   images,
   title,
-}: ArtworkCarouselProps) {
+}: ArtworkCarousselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 

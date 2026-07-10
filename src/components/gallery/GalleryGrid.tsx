@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArtworkSummary } from "@/interfaces/artwork";
+import { ArtworkSummary } from "@/types/artwork";
 
 export default function GalleryGrid({
   artworks,

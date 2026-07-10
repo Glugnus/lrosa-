@@ -19,9 +19,9 @@ export default function ContactPage({
         </h1>
         <p className="text-zinc-400 mb-12">
           Vous avez une question sur une œuvre, un projet de collaboration ou
-          simplement envie d&apos;échanger ? Écrivez-moi, je vous répondrai rapidement.
+          simplement envie d&apos;échanger ? Écrivez-moi, je vous répondrai
+          rapidement.
         </p>
-
         <ContactForm />
       </div>
     </div>

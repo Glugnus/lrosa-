@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 export function AboutContact() {
   return (
@@ -6,12 +6,9 @@ export function AboutContact() {
       <p className="text-sm uppercase tracking-widest text-zinc-500 mb-6 font-bold">
         Une idée de collaboration ?
       </p>
-      <Link
-        href="/contact"
-        className="inline-block border border-zinc-700 hover:border-white text-zinc-300 hover:text-white px-8 py-4 uppercase text-xs font-bold tracking-widest transition-all"
-      >
+      <LinkButton href="/contact" variant="outline">
         Me Contacter
-      </Link>
+      </LinkButton>
     </div>
   );
 }

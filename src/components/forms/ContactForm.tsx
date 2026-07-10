@@ -3,16 +3,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { sendContactEmail } from "@/actions/contact";
-
-const contactSchema = z.object({
-  nom: z.string().min(2, "Le nom est trop court"),
-  email: z.string().email("Adresse email invalide"),
-  sujet: z.string().min(5, "Le sujet est trop court"),
-  message: z.string().min(10, "Le message doit faire au moins 10 caractères"),
-});
-
+import { contactSchema, type ContactFormData } from "@/schemas/contact";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Button } from "@/components/ui/Button";
 export default function ContactForm() {
   const [isSuccess, setIsSuccess] = useState(false);
   const {
@@ -24,7 +19,7 @@ export default function ContactForm() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+  const onSubmit = async (data: ContactFormData) => {
     const result = await sendContactEmail(data);
     if (result.success) {
       setIsSuccess(true);
@@ -56,10 +51,9 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <input
+        <Input
           {...register("nom")}
           placeholder="Votre nom et prénom"
-          className="w-full bg-zinc-900 border border-zinc-700 p-4 text-white focus:border-white outline-none transition-all"
         />
         {errors.nom && (
           <p className="text-rose-500 text-xs mt-1">
@@ -69,10 +63,9 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <input
+        <Input
           {...register("email")}
           placeholder="Votre email"
-          className="w-full bg-zinc-900 border border-zinc-700 p-4 text-white focus:border-white outline-none transition-all"
         />
         {errors.email && (
           <p className="text-rose-500 text-xs mt-1">
@@ -82,10 +75,9 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <input
+        <Input
           {...register("sujet")}
           placeholder="Sujet de votre demande"
-          className="w-full bg-zinc-900 border border-zinc-700 p-4 text-white focus:border-white outline-none transition-all"
         />
         {errors.sujet && (
           <p className="text-rose-500 text-xs mt-1">
@@ -95,11 +87,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <textarea
+        <Textarea
           {...register("message")}
           placeholder="Votre message"
           rows={6}
-          className="w-full bg-zinc-900 border border-zinc-700 p-4 text-white focus:border-white outline-none transition-all"
         />
         {errors.message && (
           <p className="text-rose-500 text-xs mt-1">
@@ -108,13 +99,9 @@ export default function ContactForm() {
         )}
       </div>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-white text-zinc-950 font-bold py-4 uppercase tracking-widest hover:bg-zinc-200 transition-colors disabled:opacity-50"
-      >
-        {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
-      </button>
+      <Button type="submit" isLoading={isSubmitting}>
+        Envoyer le message
+      </Button>
     </form>
   );
 }
