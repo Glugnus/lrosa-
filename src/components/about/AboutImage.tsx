@@ -11,9 +11,6 @@ export function AboutImage() {
         className="object-cover lg:grayscale hover:grayscale-0 transition-all duration-1000"
         priority
       />
-      <div className="absolute bottom-0 left-0 bg-white text-zinc-950 px-6 py-4 font-heading font-bold uppercase tracking-widest text-sm">
-        L&apos;Artiste
-      </div>
     </div>
   );
 }
