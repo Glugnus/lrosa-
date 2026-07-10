@@ -26,7 +26,7 @@ export default function MobileMenu({ isOpen, closeMenu }: MobileMenuProps) {
           onClick={closeMenu}
           className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
         >
-          Acceuil
+          Accueil
         </Link>
         <Link
           href="/galerie"
