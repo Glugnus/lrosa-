@@ -17,7 +17,7 @@ export default function AboutTeaser() {
           href="/a-propos"
           className="inline-block mt-4 text-white uppercase text-sm font-bold tracking-widest border-b border-rose-500 pb-1 hover:text-rose-500 transition-colors"
         >
-          Découvrir son histoire
+          Découvrir mon histoire
         </Link>
       </div>
     </section>

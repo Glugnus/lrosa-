@@ -29,7 +29,7 @@ export default function MentionsLegales() {
             d&apos;identification personnelle ont été transmises en toute
             confidentialité à l&apos;hébergeur du site.
           </p>
-          <p className="mt-2">Contact : contact@lrosa2.com</p>
+          <p className="mt-2">Contact : contact@lrosa.com</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-white mb-4">2. Hébergement</h2>
