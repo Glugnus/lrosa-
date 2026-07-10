@@ -1,8 +1,8 @@
-import Link from "next/link";
-import AtworkCard from "./ArtworkCard";
-import { ArtworkSummary } from "@/interfaces/artwork";
+import { LinkButton } from "@/components/ui/LinkButton";
+import { ArtworkSummary } from "@/types/artwork";
+import ArtworkCard from "../gallery/ArtworkCard";
 
-export default function AtworkTeaser({
+export default function ArtworkTeaser({
   artworks,
 }: {
   artworks: ArtworkSummary[];
@@ -14,23 +14,25 @@ export default function AtworkTeaser({
           <h2 className="font-heading text-3xl md:text-5xl text-white font-bold uppercase">
             Œuvres phares
           </h2>
-          <Link
+          <LinkButton
             href="/galerie"
-            className="hidden md:block border border-zinc-700 hover:border-white text-zinc-300 hover:text-white px-6 py-3 uppercase text-xs font-bold tracking-widest transition-all"
+            variant="outline"
+            className="hidden md:inline-block"
           >
             Voir la galerie complète
-          </Link>
+          </LinkButton>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AtworkCard artworks={artworks} />
+          <ArtworkCard artworks={artworks} />
         </div>
         <div className="mt-12 text-center md:hidden">
-          <Link
+          <LinkButton
             href="/galerie"
-            className="inline-block border border-zinc-700 text-zinc-300 px-8 py-4 uppercase text-sm font-bold tracking-widest w-full"
+            variant="outline"
+            className="w-full"
           >
             Voir la galerie complète
-          </Link>
+          </LinkButton>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ArtworkSummary } from "@/interfaces/artwork";
+import { ArtworkSummary } from "@/types/artwork";
 import Image from "next/image";
 import Link from "next/link";
 

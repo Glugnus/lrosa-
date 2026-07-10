@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ArtworkDetail } from "@/interfaces/artwork";
+import { LinkButton } from "@/components/ui/LinkButton";
+import { ArtworkDetail } from "@/types/artwork";
 
 interface ArtworkInfoProps {
   artwork: ArtworkDetail;
@@ -35,12 +35,13 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
               Cette pièce fait désormais partie d&apos;une collection privée. Je
               réalise également des créations personnalisées.
             </p>
-            <Link
+            <LinkButton
               href={`/contact?sujet=Demande de collaboration artistique (Style ${artwork.title})`}
-              className="inline-block mt-4 border border-zinc-700 text-zinc-300 hover:text-white hover:border-white px-8 py-4 uppercase text-sm font-bold tracking-widest text-center transition-colors"
+              variant="outline"
+              className="mt-4"
             >
               Demander une création similaire
-            </Link>
+            </LinkButton>
           </>
         ) : (
           <>
@@ -51,12 +52,13 @@ export default function ArtworkInfo({ artwork }: ArtworkInfoProps) {
               Chaque œuvre est unique et peinte à la main. N&apos;hésitez pas à
               me contacter pour en savoir plus.
             </p>
-            <Link
+            <LinkButton
               href={`/contact?sujet=Intérêt pour : ${artwork.title}`}
-              className="inline-block mt-4 bg-white text-zinc-950 hover:bg-zinc-200 px-8 py-4 uppercase text-sm font-bold tracking-widest text-center transition-colors"
+              variant="primary"
+              className="mt-4"
             >
               Me contacter
-            </Link>
+            </LinkButton>
           </>
         )}
       </div>

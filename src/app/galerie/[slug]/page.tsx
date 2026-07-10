@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { BackButton } from "@/components/ui/BackButton";
 import { sanityFetch } from "@/sanity/lib/live";
-import { ArtworkDetail } from "@/interfaces/artwork";
+import { ArtworkDetail } from "@/types/artwork";
 import { notFound } from "next/navigation";
 import { ARTWORK_DETAIL_QUERY } from "@/sanity/lib/queries";
 import ArtworkImages from "@/components/gallery/ArtworkImages";
@@ -47,7 +46,7 @@ export async function generateMetadata(
     },
   };
 }
-export default async function DetailOeuvre({
+export default async function ArtworkDetails({
   params,
 }: {
   params: { slug: string };
@@ -65,13 +64,9 @@ export default async function DetailOeuvre({
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-300">
       <div className="container mx-auto px-6 lg:px-12 py-12">
-        <Link
-          href="/galerie"
-          className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors mb-12 uppercase text-xs font-bold tracking-widest"
-        >
-          <ArrowLeft className="w-4 h-4" />
+        <BackButton href="/galerie" className="mb-12">
           Retour à la collection
-        </Link>
+        </BackButton>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <ArtworkImages artwork={artwork} />

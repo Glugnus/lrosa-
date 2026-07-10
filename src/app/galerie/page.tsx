@@ -1,5 +1,5 @@
 import GalleryGrid from "@/components/gallery/GalleryGrid";
-import { ArtworkSummary } from "@/interfaces/artwork";
+import { ArtworkSummary } from "@/types/artwork";
 import { sanityFetch } from "@/sanity/lib/live";
 import { ALL_ARTWORKS_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";

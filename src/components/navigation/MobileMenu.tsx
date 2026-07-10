@@ -1,3 +1,4 @@
+import { NAV_LINKS } from "@/config/navigation";
 import Link from "next/link";
 import { X } from "lucide-react";
 
@@ -21,34 +22,16 @@ export default function MobileMenu({ isOpen, closeMenu }: MobileMenuProps) {
         </button>
       </div>
       <nav className="flex flex-col items-center bg-zinc-950 justify-center flex-1 gap-10 pb-10">
-        <Link
-          href="/"
-          onClick={closeMenu}
-          className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
-        >
-          Accueil
-        </Link>
-        <Link
-          href="/galerie"
-          onClick={closeMenu}
-          className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
-        >
-          Galerie
-        </Link>
-        <Link
-          href="/a-propos"
-          onClick={closeMenu}
-          className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
-        >
-          À Propos
-        </Link>
-        <Link
-          href="/contact"
-          onClick={closeMenu}
-          className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
-        >
-          Contact
-        </Link>
+        {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={closeMenu}
+            className="text-2xl text-zinc-300 hover:text-white uppercase font-bold tracking-widest transition-colors"
+          >
+            {link.name}
+          </Link>
+        ))}
       </nav>
     </div>
   );
