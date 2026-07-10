@@ -1,10 +1,10 @@
 import { sanityFetch } from "@/sanity/lib/live";
-import HeroSection from "@/components/ui/HeroSection";
-import AboutTeaser from "@/components/ui/AboutTeaser";
-import AtworkTeaser from "@/components/ui/artwork-teaser/ArtworkTeaser";
+import HeroSection from "@/components/home/HeroSection";
+import AboutTeaser from "@/components/home/AboutTeaser";
 import { FAVORITES_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
-import { ArtworkSummary } from "@/interfaces/artwork";
+import { ArtworkSummary } from "@/types/artwork";
+import ArtworkTeaser from "@/components/home/ArtworkTeaser";
 
 export const metadata: Metadata = {
   title: "Accueil | LROSA²",
@@ -20,7 +20,7 @@ export default async function Home() {
     <div className="flex flex-col">
       <HeroSection />
       <AboutTeaser />
-      <AtworkTeaser artworks={favoritesArtworks} />
+      <ArtworkTeaser artworks={favoritesArtworks} />
     </div>
   );
 }

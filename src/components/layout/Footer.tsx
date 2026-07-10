@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa6";
+import { siteConfig } from "@/config/site";
+import { FOOTER_LINKS } from "@/config/navigation";
 
 export default function Footer() {
   return (
@@ -7,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex gap-6 uppercase text-sm font-bold tracking-widest">
           <a
-            href="https://www.instagram.com/lrosa2_artiste?igsh=d3hrNjdsemR1dWF5"
+            href={siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -17,18 +19,15 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex gap-6 text-sm text-zinc-500">
-          <Link
-            href="/mentions-legales"
-            className="hover:text-zinc-300 transition-colors"
-          >
-            Mentions Légales
-          </Link>
-          <Link
-            href="/confidentialite"
-            className="hover:text-zinc-300 transition-colors"
-          >
-            Confidentialité
-          </Link>
+          {FOOTER_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:text-zinc-300 transition-colors"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
         <p className="text-xs text-zinc-600">
           © {new Date().getFullYear()} LROSA². Tous droits réservés.

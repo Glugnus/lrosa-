@@ -1,6 +1,6 @@
-import { ArtworkDetail } from "@/interfaces/artwork";
+import { ArtworkDetail } from "@/types/artwork";
 import SingleImage from "./SingleImage";
-import ArtworkCarousel from "./ArtworkCaroussel";
+import ArtworkCaroussel from "./ArtworkCaroussel";
 
 interface ArtworkImagesProps {
   artwork: ArtworkDetail;
@@ -17,5 +17,5 @@ export default function ArtworkImages({ artwork }: ArtworkImagesProps) {
     return <SingleImage src={allImages[0]} title={artwork.title} />;
   }
 
-  return <ArtworkCarousel images={allImages} title={artwork.title} />;
+  return <ArtworkCaroussel images={allImages} title={artwork.title} />;
 }
